@@ -29,7 +29,7 @@ namespace HelloWorld
 
         private void ClickMeButton_Click(object sender, RoutedEventArgs e)
         {
-            ResultTextBlock.Text = "Hello World!";
+            ResultTextBlock.Text = "Hello World. Test change";
 
         }
     }
