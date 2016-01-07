@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\He
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStackPanel", "SimpleStackPanel\SimpleStackPanel.csproj", "{7C49D446-3279-4819-903C-E350AF382B65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaudableLayoutChallange", "LaudableLayoutChallange\LaudableLayoutChallange.csproj", "{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -53,6 +55,24 @@ Global
 		{7C49D446-3279-4819-903C-E350AF382B65}.Release|x86.ActiveCfg = Release|x86
 		{7C49D446-3279-4819-903C-E350AF382B65}.Release|x86.Build.0 = Release|x86
 		{7C49D446-3279-4819-903C-E350AF382B65}.Release|x86.Deploy.0 = Release|x86
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Debug|ARM.ActiveCfg = Debug|ARM
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Debug|ARM.Build.0 = Debug|ARM
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Debug|ARM.Deploy.0 = Debug|ARM
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Debug|x64.ActiveCfg = Debug|x64
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Debug|x64.Build.0 = Debug|x64
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Debug|x64.Deploy.0 = Debug|x64
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Debug|x86.ActiveCfg = Debug|x86
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Debug|x86.Build.0 = Debug|x86
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Debug|x86.Deploy.0 = Debug|x86
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Release|ARM.ActiveCfg = Release|ARM
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Release|ARM.Build.0 = Release|ARM
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Release|ARM.Deploy.0 = Release|ARM
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Release|x64.ActiveCfg = Release|x64
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Release|x64.Build.0 = Release|x64
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Release|x64.Deploy.0 = Release|x64
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Release|x86.ActiveCfg = Release|x86
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Release|x86.Build.0 = Release|x86
+		{AECD99F3-3EE8-4930-9D74-6C6B6572BE21}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
