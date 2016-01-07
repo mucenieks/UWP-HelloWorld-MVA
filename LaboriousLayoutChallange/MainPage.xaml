@@ -12,66 +12,60 @@
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <TextBlock FontSize="24" Margin="0,0,40,0">Title 1</TextBlock>
-            <StackPanel Grid.Row="1" Grid.Column="1">
-                <TextBlock FontSize="16" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap">
+            <TextBlock FontSize="16" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </TextBlock>
-                <StackPanel Orientation="Horizontal">
-                    <Rectangle Fill="Green" Width="100" Height="30"/>
-                    <Rectangle Fill="Black" Width="100" Height="30"/>
-                    <Rectangle Fill="Red" Width="100" Height="30"/>
-                </StackPanel>
+            </TextBlock>
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                <Rectangle Fill="Green" Width="100" Height="30"/>
+                <Rectangle Fill="Black" Width="100" Height="30"/>
+                <Rectangle Fill="Red" Width="100" Height="30"/>
             </StackPanel>
         </Grid>
         <Grid Margin="0,0,0,20">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <TextBlock FontSize="24" Margin="0,0,40,0">Title 2</TextBlock>
-            <StackPanel Grid.Row="1" Grid.Column="1">
-                <TextBlock FontSize="16" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap">
+            <TextBlock FontSize="16" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </TextBlock>
-                <StackPanel Orientation="Horizontal">
-                    <Rectangle Fill="Red" Width="100" Height="30"/>
-                    <Rectangle Fill="Black" Width="100" Height="30"/>
-                    <Rectangle Fill="Blue" Width="100" Height="30"/>
-                </StackPanel>
+            </TextBlock>
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                <Rectangle Fill="Red" Width="100" Height="30"/>
+                <Rectangle Fill="Black" Width="100" Height="30"/>
+                <Rectangle Fill="Blue" Width="100" Height="30"/>
             </StackPanel>
         </Grid>
         <Grid Margin="0,0,0,20">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <TextBlock FontSize="24" Margin="0,0,40,0">Title 3</TextBlock>
-            <StackPanel Grid.Row="1" Grid.Column="1">
-                <TextBlock FontSize="16" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap">
+            <TextBlock FontSize="16" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </TextBlock>
-                <StackPanel Orientation="Horizontal">
-                    <Rectangle Fill="Blue" Width="100" Height="30"/>
-                    <Rectangle Fill="Black" Width="100" Height="30"/>
-                    <Rectangle Fill="Yellow" Width="100" Height="30"/>
-                </StackPanel>
+            </TextBlock>
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                <Rectangle Fill="Blue" Width="100" Height="30"/>
+                <Rectangle Fill="Black" Width="100" Height="30"/>
+                <Rectangle Fill="Yellow" Width="100" Height="30"/>
             </StackPanel>
         </Grid>
     </StackPanel>
