@@ -7,9 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Margin="20,0,0,0">
+    <StackPanel Margin="10,20,0,0">
         <StackPanel>
-            <TextBlock FontSize="48">Lorem Ipsum</TextBlock>
+            <TextBlock FontSize="48" Margin="0,0,0,20">Lorem Ipsum</TextBlock>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Width="250" TextWrapping="Wrap" Margin="0,0,20,0" FontSize="18.667">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -21,7 +21,7 @@
                 </TextBlock>
                 <StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Rectangle Height="200" Width="200" Fill="Blue" />
+                        <Rectangle Height="200" Width="200" Fill="Blue" VerticalAlignment="Top"/>
                         <StackPanel>
                             <Rectangle Height="100" Width="100" Fill="Red" />
                             <Rectangle Height="100" Width="100" Fill="Yellow" />
