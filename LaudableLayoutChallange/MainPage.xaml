@@ -7,26 +7,31 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Margin="10,0,0,0" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" FontSize="48" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="10,20,0,20">ACME Sales Corp</TextBlock>
-        <TextBlock Grid.Row="1" VerticalAlignment="Center" Margin="10,0,0,0">First Name:</TextBlock>
-        <TextBlock Grid.Row="2" VerticalAlignment="Center" Margin="10,0,0,0">Last Name:</TextBlock>
-        <TextBlock Grid.Row="3" VerticalAlignment="Center" Margin="10,0,0,0">eMail:</TextBlock>
+        <TextBlock Grid.Row="0" FontSize="48" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="0,0,0,20">ACME Sales Corp</TextBlock>
+        <TextBlock Grid.Row="1" VerticalAlignment="Center" >First Name:</TextBlock>
         <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="0,0,0,10"/>
+        
+        <TextBlock Grid.Row="2" VerticalAlignment="Center">Last Name:</TextBlock>
         <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="0,0,0,10"/>
+
+        <TextBlock Grid.Row="3" VerticalAlignment="Center">eMail:</TextBlock>
         <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Margin="0,0,0,10"/>
+        
         <Button Grid.Row="4" Grid.Column="1">Save</Button>
+        
     </Grid>
 </Page>
