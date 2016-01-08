@@ -37,5 +37,14 @@ namespace ControlsExamplepart1
         {
             RadioButtotextBlock.Text = (bool)YesRadioButton.IsChecked ? "Yes" : "No";
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ComboBoxResultTextBlock == null) return;
+
+            var combo = (ComboBox)sender;
+            var item = (ComboBoxItem)combo.SelectedItem;
+            ComboBoxResultTextBlock.Text = item.Content.ToString();
+        }
     }
 }
