@@ -27,6 +27,14 @@ namespace NavigationExample_Tutorial
             this.InitializeComponent();
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            //base.OnNavigatedTo(e);
+            var value = (string)e.Parameter;
+            ValueTextBox.Text = value;
+
+        }
+
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Page1));

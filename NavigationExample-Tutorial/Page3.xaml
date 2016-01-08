@@ -9,6 +9,7 @@
 
     <StackPanel>
         <TextBlock FontSize="48">Page 3</TextBlock>
+        <TextBox Name="ValueTextBox" Width="200" />
         <HyperlinkButton Content="Go To Page 1" Click="HyperlinkButton_Click" />
 
     </StackPanel>

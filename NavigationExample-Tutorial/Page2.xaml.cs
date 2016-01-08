@@ -29,7 +29,7 @@ namespace NavigationExample_Tutorial
 
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Page3));
+            Frame.Navigate(typeof(Page3), ValueTextBox.Text);
 
         }
     }
