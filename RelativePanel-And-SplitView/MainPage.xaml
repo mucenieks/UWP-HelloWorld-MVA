@@ -16,6 +16,30 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
+        <StackPanel>
+            
+            <SplitView Grid.Column="0" Name="MySplitView" Height="200" VerticalAlignment="Top" DisplayMode="CompactInline" CompactPaneLength="20">
+                <SplitView.Pane>
+                    <StackPanel>
+                        <TextBlock Text="First"/>
+                        <TextBlock Text="Second"/>
+                        <TextBlock Text="Third"/>
+                    </StackPanel>
+                </SplitView.Pane>
+
+                <SplitView.Content>
+                    <StackPanel>
+                        <TextBlock Text="Forth"/>
+                        <TextBlock Text="Fifth"/>
+                        <TextBlock Text="Sixth"/>
+                    </StackPanel>
+                </SplitView.Content>
+            
+            </SplitView>
+
+            <Button Content="Click" Click="Button_Click" />
+        </StackPanel>
+
         <RelativePanel Grid.Column="1" MinHeight="300">
             <Rectangle Name="RedR"
                        Fill="Red"
