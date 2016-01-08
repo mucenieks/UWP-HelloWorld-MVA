@@ -55,5 +55,11 @@ namespace ControlsExamplepart1
                 .ToArray();
             ListBoxResultTextBlock.Text = string.Join(", ", selectedItems);
         }
+
+        private void MyToggleButton_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleButtonResultTextBlock.Text = MyToggleButton.IsChecked.ToString();
+
+        }
     }
 }

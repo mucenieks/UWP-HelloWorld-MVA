@@ -16,6 +16,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
@@ -90,11 +91,37 @@
                Grid.Row="5"
                Grid.Column="1"
                Stretch="Uniform"
-               Margin="20,10,0,10" 
-               
+               Margin="20,10,0,10"        
                />
-        
-        
+
+        <TextBlock Grid.Row="6" Text="ToggleButton" VerticalAlignment="Center" />
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Margin="20,10,0,10" >
+            <ToggleButton Name="MyToggleButton"
+                          Content="Premium Option"
+                          IsThreeState="True"
+                          Click="MyToggleButton_Click" />
+            <TextBlock Name="ToggleButtonResultTextBlock" />
+
+        </StackPanel>
+
+        <TextBlock Grid.Row="7" Text="Toggle Switch" VerticalAlignment="Center" />
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    Margin="20,10,0,10" >
+            <ToggleSwitch>
+                <ToggleSwitch.OffContent>
+                    <TextBlock Text="I'm Off" />
+                </ToggleSwitch.OffContent>
+                <ToggleSwitch.OnContent>
+                    <TextBlock Text="I'm ON" />
+                </ToggleSwitch.OnContent>
+            </ToggleSwitch>
+            
+        </StackPanel>
 
     </Grid>
 </Page>
