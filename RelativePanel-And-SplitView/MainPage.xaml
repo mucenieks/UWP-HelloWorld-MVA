@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="RelativePanel_And_SplitView.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RelativePanel_And_SplitView"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <RelativePanel Grid.Column="1" MinHeight="300">
+            <Rectangle Name="RedR"
+                       Fill="Red"
+                       Width="100"
+                       Height="100"
+                       RelativePanel.AlignRightWithPanel="True" />
+
+            <Rectangle Name="BlueR"
+                       Fill="Blue"
+                       Width="80"
+                       Height="80"
+                       RelativePanel.LeftOf="RedR" />
+
+            <Rectangle Name="GreenR"
+                       Fill="Green"
+                       Width="70"
+                       Height="70"
+                       RelativePanel.AlignVerticalCenterWith="RedR"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True" />
+
+            <Rectangle Name="YellowR"
+                       Fill="Yellow"
+                       MinWidth="50"
+                       MinHeight="50"
+                       RelativePanel.AlignBottomWithPanel="True"
+                       RelativePanel.AlignTopWith="PurpR" />
+
+            <Rectangle Name="PurpR"
+                       Fill="Purple"
+                       MinHeight="50"
+                       MinWidth="200"
+                       RelativePanel.Below="RedR"
+                       RelativePanel.AlignRightWith="RedR"
+                       RelativePanel.AlignLeftWith="GreenR" />
+
+
+        </RelativePanel>
+        
+
+    </Grid>
+</Page>
+
+    
