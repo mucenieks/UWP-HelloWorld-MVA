@@ -13,26 +13,23 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace HelloWorld
+namespace NavigationExample_Tutorial
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class Page1 : Page
     {
-        public MainPage()
+        public Page1()
         {
             this.InitializeComponent();
         }
 
-        /*
-        private void ClickMeButton_Click(object sender, RoutedEventArgs e)
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
-            ResultTextBlock.Text = "Hello World. Test change";
-
+            Frame.Navigate(typeof(Page2));
         }
-        */
     }
 }
