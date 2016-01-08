@@ -7,8 +7,12 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="AliceBlue" >
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -64,6 +68,33 @@
             <TextBlock Name="ComboBoxResultTextBlock" />
 
         </StackPanel>
+
+        <TextBlock Grid.Row="4" Text="ListBox" VerticalAlignment="Center" />
+        <StackPanel Grid.Row="4" Grid.Column="1" Margin="20,10,0,10">
+            <ListBox Name="MyListBox"
+                     SelectionMode="Multiple"
+                     SelectionChanged="MyListBox_SelectionChanged">
+                <ListBoxItem Content="First"/>
+                <ListBoxItem Content="Second"/>
+                <ListBoxItem Content="Third"/>
+            </ListBox>
+            <TextBlock Name="ListBoxResultTextBlock" />
+
+        </StackPanel>
+
+        <TextBlock Grid.Row="5" Text="Image" VerticalAlignment="Center" />
+        <Image Source="Assets/logo_white.png"
+               HorizontalAlignment="Left"
+               Width="250"
+               Height="50"
+               Grid.Row="5"
+               Grid.Column="1"
+               Stretch="Uniform"
+               Margin="20,10,0,10" 
+               
+               />
+        
+        
 
     </Grid>
 </Page>

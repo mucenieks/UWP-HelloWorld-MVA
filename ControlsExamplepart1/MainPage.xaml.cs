@@ -46,5 +46,14 @@ namespace ControlsExamplepart1
             var item = (ComboBoxItem)combo.SelectedItem;
             ComboBoxResultTextBlock.Text = item.Content.ToString();
         }
+
+        private void MyListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedItems = MyListBox.Items.Cast<ListBoxItem>()
+                .Where(p => p.IsSelected)
+                .Select(t => t.Content.ToString())
+                .ToArray();
+            ListBoxResultTextBlock.Text = string.Join(", ", selectedItems);
+        }
     }
 }
