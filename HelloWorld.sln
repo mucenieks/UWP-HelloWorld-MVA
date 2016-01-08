@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavigationExample-Tutorial"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlsExamplepart1", "ControlsExamplepart1\ControlsExamplepart1.csproj", "{C04C0D7D-9BE3-4B0C-B85F-CC6EE757C62A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHamburger-tutorial", "SimpleHamburger-tutorial\SimpleHamburger-tutorial.csproj", "{685DAE77-5E38-4D29-8C49-6199C2E4FA83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -173,6 +175,24 @@ Global
 		{C04C0D7D-9BE3-4B0C-B85F-CC6EE757C62A}.Release|x86.ActiveCfg = Release|x86
 		{C04C0D7D-9BE3-4B0C-B85F-CC6EE757C62A}.Release|x86.Build.0 = Release|x86
 		{C04C0D7D-9BE3-4B0C-B85F-CC6EE757C62A}.Release|x86.Deploy.0 = Release|x86
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Debug|ARM.ActiveCfg = Debug|ARM
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Debug|ARM.Build.0 = Debug|ARM
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Debug|ARM.Deploy.0 = Debug|ARM
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Debug|x64.ActiveCfg = Debug|x64
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Debug|x64.Build.0 = Debug|x64
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Debug|x64.Deploy.0 = Debug|x64
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Debug|x86.ActiveCfg = Debug|x86
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Debug|x86.Build.0 = Debug|x86
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Debug|x86.Deploy.0 = Debug|x86
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Release|ARM.ActiveCfg = Release|ARM
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Release|ARM.Build.0 = Release|ARM
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Release|ARM.Deploy.0 = Release|ARM
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Release|x64.ActiveCfg = Release|x64
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Release|x64.Build.0 = Release|x64
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Release|x64.Deploy.0 = Release|x64
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Release|x86.ActiveCfg = Release|x86
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Release|x86.Build.0 = Release|x86
+		{685DAE77-5E38-4D29-8C49-6199C2E4FA83}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
