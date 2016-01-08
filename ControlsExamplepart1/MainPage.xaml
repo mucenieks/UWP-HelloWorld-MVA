@@ -29,5 +29,21 @@
 
         </StackPanel>
 
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Margin="20,10,0,10">
+            <RadioButton Name="YesRadioButton"
+                         Content="Yes"
+                         GroupName="MyGroup"
+                         Checked="RadioButton_Checked"/>
+            <RadioButton Name="NoRadioButton"
+                         Content="No"
+                         GroupName="MyGroup"
+                         Checked="RadioButton_Checked"/>
+            <TextBlock Name="RadioButtotextBlock" />
+
+        </StackPanel>
+
     </Grid>
 </Page>

@@ -32,5 +32,10 @@ namespace ControlsExamplepart1
             CheckBoxResulttextBlock.Text = MyCheckBox.IsChecked.ToString();
 
         }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButtotextBlock.Text = (bool)YesRadioButton.IsChecked ? "Yes" : "No";
+        }
     }
 }
