@@ -7,6 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -26,13 +28,16 @@
                    DisplayMode="CompactOverlay" 
                    OpenPaneLength="200" 
                    CompactPaneLength="56" 
-                   HorizontalAlignment="Left">
+                   HorizontalAlignment="Left"
+                   PaneBackground="#4C101839"
+                   >
             <SplitView.Pane>
                 <ListBox SelectionMode="Single"
                          Name="IconsListBox"
-                         SelectionChanged="IconsListBox_SelectionChanged">
+                         SelectionChanged="IconsListBox_SelectionChanged"
+                         Background="#aaaaffaa">
                     <ListBoxItem Name="ShareListBoxItem">
-                        <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal" Background="#aaaaffaa">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE72D;" Margin="0,0,10,0"/>
                             <TextBlock FontSize="28" Text="Share"/>
                         </StackPanel>
