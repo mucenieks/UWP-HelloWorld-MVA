@@ -31,29 +31,77 @@
 
             <TextBox Name="SearchTextBox"
                      Width="200"
-                     Height="Auto"
+                     Height="auto"
                      FontSize="28"
+                     PlaceholderText="Search"
+                     Background="LightGray"
+                     BorderBrush="LightGray"
                      RelativePanel.LeftOf="SearchButton"
                      />
-            <Button Name="BackButton"
+            <StackPanel Orientation="Horizontal"
+                        Height="auto"
+                        RelativePanel.RightOf="HamburgerButton"
+                        VerticalAlignment="Center">
+
+                <Button Name="BackButton"
                     FontFamily="Segoe MDL2 Assets"
                     Content="&#xE72B;"
                     FontSize="36"
                     Click="BackButton_Click"
-                    RelativePanel.RightOf="HamburgerButton"
                     />
 
-            <TextBlock Name="PageTitleTextBlock"
+                <TextBlock Name="PageTitleTextBlock"
                        Width="Auto"
                        Height="Auto"
-                       FontSize="38"
-                       RelativePanel.RightOf="HamburgerButton"
+                       FontSize="30"
+                       FontWeight="Bold"
                        Text="Page Title"
                        Margin="10,0,0,0"
                        />
+            </StackPanel>
 
 
         </RelativePanel>
+
+        <SplitView Grid.Row="1" Name="MySplitView" 
+                   DisplayMode="CompactOverlay" 
+                   OpenPaneLength="200" 
+                   CompactPaneLength="56" 
+                   HorizontalAlignment="Left"
+                   PaneBackground="LightGray"
+                   >
+            <SplitView.Pane>
+                <ListBox SelectionMode="Single"
+                         Name="IconsListBox"
+                         SelectionChanged="IconsListBox_SelectionChanged"
+                         Background="LightGray">
+                    <ListBoxItem Name="FinancialListBoxItem">
+                        <StackPanel Orientation="Horizontal" Background="LightGray">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE80F;" Margin="0,0,10,0"/>
+                            <TextBlock FontSize="28" Text="Financial"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="FoodListBoxItem">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE734;" Margin="0,0,10,0"/>
+                            <TextBlock FontSize="28" Text="Food"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <!--ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE909;" Margin="0,0,10,0"/>
+                            <TextBlock FontSize="28" Text="Settings"/>
+                        </StackPanel>
+                    </-->
+
+                </ListBox>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Frame Name="MyFrame" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" LayoutUpdated="MyFrame_LayoutUpdated" ></Frame>
+                <!--TextBlock Name="ResultTextBlock" Text="Aasdfdsf" /-->
+            </SplitView.Content>
+        </SplitView>
+
 
     </Grid>
 </Page>

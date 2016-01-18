@@ -22,9 +22,66 @@ namespace HamburgerHeavenChallange
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
         public MainPage()
         {
             this.InitializeComponent();
+            MyFrame.Navigate(typeof(Financial));
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MyFrame.CanGoBack)
+                {
+                    MyFrame.GoBack();
+                    BackButton.Visibility=Visibility.Visible;
+                }
+        }
+
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+
+        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (FinancialListBoxItem.IsSelected) {
+                PageTitleTextBlock.Text = "Financial";
+                MyFrame.Navigate(typeof(Financial));
+            }
+            else if (FoodListBoxItem.IsSelected) {
+                PageTitleTextBlock.Text = "Food";
+
+                MyFrame.Navigate(typeof(Food));
+            }
+        }
+
+        /*
+        private void MyFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+            if (MyFrame.CanGoBack)
+            {
+                BackButton.Visibility = Visibility.Visible;
+            } else {
+                BackButton.Visibility = Visibility.Collapsed;
+            }
+        }
+        */
+
+        private void MyFrame_LayoutUpdated(object sender, object e)
+        {
+            if (MyFrame.CanGoBack)
+            {
+                BackButton.Visibility = Visibility.Visible;
+            }
+            else {
+                BackButton.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }
