@@ -23,7 +23,7 @@
 
             <Button Name="SearchButton"
                     FontFamily="Segoe MDL2 Assets"
-                    Content="&#xE71E;"
+                    Content="&#xE1A3;"
                     FontSize="36"
                     Click="SearchButton_Click"
                     RelativePanel.AlignRightWithPanel="True"
@@ -31,8 +31,8 @@
 
             <TextBox Name="SearchTextBox"
                      Width="200"
-                     Height="auto"
-                     FontSize="28"
+                     Height="48"
+                     FontSize="24"
                      PlaceholderText="Search"
                      Background="LightGray"
                      BorderBrush="LightGray"
@@ -53,7 +53,7 @@
                 <TextBlock Name="PageTitleTextBlock"
                        Width="Auto"
                        Height="Auto"
-                       FontSize="30"
+                       FontSize="28"
                        FontWeight="Bold"
                        Text="Page Title"
                        Margin="10,0,0,0"
