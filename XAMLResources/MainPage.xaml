@@ -7,27 +7,33 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Page.Resources>
-        <!--ResourceDictionary>
+        <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Dicitionary1.xaml" />
+                <ResourceDictionary Source="Dictionary1.xaml" />
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary-->
-        <SolidColorBrush x:Key="MyBrush" Color="Brown" />
-        <x:String x:Key="MyGreeting">Hello world!</x:String>
-        <Style TargetType="Button" x:Key="MyButtonStyle">
+        </ResourceDictionary>
+
+        <!-- single SolidColorBrush style hardcoded to page example -->
+        <!--SolidColorBrush x:Key="MyBrush" Color="Brown" /-->
+
+        <!-- single String Resource hardcoded to page example -->
+        <!--x:String x:Key="MyGreeting">Hello world!</-->
+        
+        <!-- single Style hardcoded to page example -->
+        <!--Style TargetType="Button" x:Key="MyButtonStyle">
             <Setter Property="Background" Value="Blue" />
             <Setter Property="FontFamily" Value="Arial Black" />
-            <Setter Property="FontSize" Value="28" />
-        </Style>
+            <Setter Property="FontSize" Value="28" /-->
+        
     </Page.Resources>
 
         <StackPanel>
 
-        <TextBlock Text="{StaticResource MyGreeting}"
-                   Foreground="{StaticResource MyBrush}" />
-        <Button Content="My Button Style Example"
+        <!--TextBlock Text="{StaticResource MyGreeting}"
+                   Foreground="{StaticResource MyBrush}" /-->
+        <!--Button Content="My Button Style Example"
                 Height="100"
-                Style="{StaticResource MyButtonStyle}"/>
+                Style="{StaticResource MyButtonStyle}"/-->
 
         <TextBlock Text="{StaticResource MyAppGreeting}"
                    Foreground="{StaticResource MyAppBrush}" />
@@ -35,8 +41,8 @@
                 Height="100"
                 Style="{StaticResource MyAppButtonStyle}"/>
 
-        <TextBlock Text="{StaticResource MyAppGreeting}"
-                   Foreground="{StaticResource }" />
+        <!--TextBlock Text="{StaticResource MyAppGreeting}"
+                   Foreground="{StaticResource }" /-->
         <Button Content="My Button App Style Example"
                 Height="100"
                 Style="{StaticResource MyAppButtonStyle}"/>
