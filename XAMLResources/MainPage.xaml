@@ -10,6 +10,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Dictionary1.xaml" />
+                <!--ResourceDictionary Source="Dictionary2.xaml" /-->
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 
