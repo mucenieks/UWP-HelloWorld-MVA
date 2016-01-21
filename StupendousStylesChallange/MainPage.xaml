@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="StupendousStylesChallange.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StupendousStylesChallange"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary1.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Style="{StaticResource MyNavigationButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Image Source="Assets/donut-icon.png" Stretch="Uniform" Height="16" Margin="0,0,10,0"/>
+                    <TextBlock Text="Donuts"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="1" Style="{StaticResource MyNavigationButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Image Source="Assets/coffee-icon.png" Stretch="Uniform" Height="16" Margin="0,0,10,0"/>
+                    <TextBlock Text="Coffee"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="2" Style="{StaticResource MyNavigationButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Image Source="Assets/schedule-icon.png" Stretch="Uniform" Height="16" Margin="0,0,10,0"/>
+                    <TextBlock Text="Schedule"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="3" Style="{StaticResource MyNavigationButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Image Source="Assets/complete-icon.png" Stretch="Uniform" Height="16" Margin="0,0,10,0"/>
+                    <TextBlock Text="Complete"/>
+                </StackPanel>
+            </Button>
+            
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" Source="Assets/background.jpg" Stretch="UniformToFill" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <Frame Name="MyFrame">
+            </Frame>
+        </Grid>
+        
+
+    </Grid>
+</Page>
