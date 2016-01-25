@@ -6,34 +6,37 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Page.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Dictionary1.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Page.Resources>
-
     <Grid Background="Red">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Image Source="Assets/white-logo.png" Style="{StaticResource LogoStyle}" Grid.Row="0"/>
-        <Grid Grid.Row="1" VerticalAlignment="Center" Height="Auto">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="3*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-            </Grid.RowDefinitions>
-            <TextBlock Style="{StaticResource ContentTextBlockStyle}" Grid.Column="0" Grid.Row="0" Text="Original Glazed Count:" />
-            <Slider Grid.Column="1" Grid.Row="0" Maximum="24" Margin="20,0,20,0" VerticalAlignment="Center"/>
-            <TextBlock Style="{StaticResource ContentTextBlockStyle}" Grid.Column="0" Grid.Row="1" Text="Speedway Special Count:" />
-            <Slider Grid.Column="1" Grid.Row="1" Maximum="24" Margin="20,0,20,0" VerticalAlignment="Center"/>
-        </Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Image Style="{StaticResource WhiteLogoStyle}" />
+
+        <TextBlock Grid.Row="1" 
+                   Style="{StaticResource LabelTextBlockStyle}"
+                   Text="Original Glazed Count:" />
+
+        <Slider Grid.Row="1" 
+                Grid.Column="1" 
+                Maximum="24" 
+                Margin="20,20,20,0" />
+
+        <TextBlock Grid.Row="2" 
+                   Style="{StaticResource LabelTextBlockStyle}"
+                   Text="Speedway Special Count:" />
+
+        <Slider Grid.Row="2" 
+                Grid.Column="1" 
+                Maximum="24" 
+                Margin="20,20,20,0" />
+
     </Grid>
 </Page>

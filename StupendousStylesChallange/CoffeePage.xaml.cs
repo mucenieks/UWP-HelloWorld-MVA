@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace StupendousStylesChallange.Assets
+namespace StupendousStylesChallange
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -27,24 +27,49 @@ namespace StupendousStylesChallange.Assets
             this.InitializeComponent();
         }
 
-        /*
-        private void MyCalendarView_SelectedDatesChanged(CalendarView sender, CalendarViewSelectedDatesChangedEventArgs args)
+        private string _roast;
+        private string _sweetener;
+        private string _cream;
+
+        private void Roast_Click(object sender, RoutedEventArgs e)
         {
-            var selectedDates = sender.SelectedDates.Select(P => P.Date.Month.ToString() + "/" + P.Date.Day.ToString()).ToArray();
-            var values = string.Join(", ", selectedDates);
-            CalendarViewResultTextBlock.Text = values;
-        }
-        */
-        private void MenuFlyout_Closed(MenuFlyout sender, ContextMenuEventArgs e)
-        {
-            /*
-            var selectedRoast = sender.GetValue.ToString();
-                Select(P => P.Date.Month.ToString() + "/" + P.Date.Day.ToString()).ToArray();
-            var values = string.Join(", ", selectedDates);
-            CalendarViewResultTextBlock.Text = values;
-            */
+            var selected = (MenuFlyoutItem)sender;
+            _roast = selected.Text;
+            displayResult();
         }
 
-    }
+        private void Sweetener_Click(object sender, RoutedEventArgs e)
+        {
+            var selected = (MenuFlyoutItem)sender;
+            _sweetener = selected.Text;
+            displayResult();
+
+        }
+
+        private void Cream_Click(object sender, RoutedEventArgs e)
+        {
+            var selected = (MenuFlyoutItem)sender;
+            _cream = selected.Text;
+            displayResult();
+
+        }
+
+        private void displayResult()
+        {
+            if (_roast == "None" || String.IsNullOrEmpty(_roast))
+            {
+                ResultTextBlock.Text = "None";
+                return;
+            }
+
+            ResultTextBlock.Text = _roast;
+
+            if (_cream != "None" && !String.IsNullOrEmpty(_cream))
+                ResultTextBlock.Text += " + " + _cream;
+
+            if (_sweetener != "None" && !String.IsNullOrEmpty(_sweetener))
+                ResultTextBlock.Text += " + " + _sweetener;
+
+        }
     }
 }

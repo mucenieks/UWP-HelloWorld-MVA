@@ -8,6 +8,19 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Image Style="{StaticResource WhiteLogoStyle}" Source="Assets/color-logo.png" />
+
+        <Image Grid.Row="1" Source="Assets/ticket.jpg" Width="300" VerticalAlignment="Center" HorizontalAlignment="Center" />
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Order" FontSize="36" HorizontalAlignment="Center" />
+            <TextBlock Text="96" FontSize="64" VerticalAlignment="Center" />
+        </StackPanel>
 
     </Grid>
 </Page>
