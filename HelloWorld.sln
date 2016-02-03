@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWPWeather", "UWPWeather\UW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileUpdateManagerExample", "TileUpdateManagerExample\TileUpdateManagerExample.csproj", "{91C8B1D0-9DE2-4A72-A6C2-79F7FC9CE443}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbumCoverMatchGame", "AlbumCoverMatchGame\AlbumCoverMatchGame.csproj", "{99EFEDFA-793E-475E-AD32-510F5A236392}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -533,6 +535,24 @@ Global
 		{91C8B1D0-9DE2-4A72-A6C2-79F7FC9CE443}.Release|x86.ActiveCfg = Release|x86
 		{91C8B1D0-9DE2-4A72-A6C2-79F7FC9CE443}.Release|x86.Build.0 = Release|x86
 		{91C8B1D0-9DE2-4A72-A6C2-79F7FC9CE443}.Release|x86.Deploy.0 = Release|x86
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Debug|ARM.ActiveCfg = Debug|ARM
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Debug|ARM.Build.0 = Debug|ARM
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Debug|ARM.Deploy.0 = Debug|ARM
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Debug|x64.ActiveCfg = Debug|x64
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Debug|x64.Build.0 = Debug|x64
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Debug|x64.Deploy.0 = Debug|x64
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Debug|x86.ActiveCfg = Debug|x86
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Debug|x86.Build.0 = Debug|x86
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Debug|x86.Deploy.0 = Debug|x86
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Release|ARM.ActiveCfg = Release|ARM
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Release|ARM.Build.0 = Release|ARM
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Release|ARM.Deploy.0 = Release|ARM
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Release|x64.ActiveCfg = Release|x64
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Release|x64.Build.0 = Release|x64
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Release|x64.Deploy.0 = Release|x64
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Release|x86.ActiveCfg = Release|x86
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Release|x86.Build.0 = Release|x86
+		{99EFEDFA-793E-475E-AD32-510F5A236392}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

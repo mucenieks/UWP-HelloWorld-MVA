@@ -20,6 +20,9 @@ namespace UWPWeather
 
             //var url = String.Format("http://api.openweathermap.org/data/2.5/weather?lat=58.3698&lon=26.7612&units=metric&appid=44db6a862fba0b067b1930da0d769e98");
 
+            //bad call for test
+            //var url = String.Format("http://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&units=metric", lat, lon);
+
             var url = String.Format("http://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&units=metric&appid=44db6a862fba0b067b1930da0d769e98", lat, lon);
 
             var response = await http.GetAsync(url);
