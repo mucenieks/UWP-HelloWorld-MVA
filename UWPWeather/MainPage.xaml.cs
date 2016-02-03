@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Notifications;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -32,11 +33,26 @@ namespace UWPWeather
         {
             var position = await LocationManager.GetPosition();
 
+            var lattitude= 58.3698;// position.Coordinate.Latitude;
+            var longitude = 26.7612;// position.Coordinate.Longitude;
+
             //RootObject myWeather = await OpenWeatherMapProxy.GetWeather(20.0, 30.0);
             RootObject myWeather = 
                 await OpenWeatherMapProxy.GetWeather(
-                    position.Coordinate.Latitude,
-                    position.Coordinate.Longitude);
+                    lattitude,
+                    longitude);
+
+            //schedule update
+            
+            var uri = "http://uwplivetile.axtest.net/test01.xml";
+
+            var tileContent = new Uri(uri);
+
+            var requestedInterval = PeriodicUpdateRecurrence.HalfHour;
+
+            var updater = TileUpdateManager.CreateTileUpdaterForApplication();
+            updater.StartPeriodicUpdate(tileContent, requestedInterval);
+            
 
             //string icon = String.Format("http://openweathermap.org/img/w/{0}.png", myWeather.weather[0].icon);
             string icon = String.Format("ms-appx:///Assets/Weather/{0}.png", myWeather.weather[0].icon);

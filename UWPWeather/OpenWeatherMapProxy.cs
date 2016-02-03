@@ -18,6 +18,8 @@ namespace UWPWeather
         {
             var http = new HttpClient();
 
+            //var url = String.Format("http://api.openweathermap.org/data/2.5/weather?lat=58.3698&lon=26.7612&units=metric&appid=44db6a862fba0b067b1930da0d769e98");
+
             var url = String.Format("http://api.openweathermap.org/data/2.5/weather?lat={0}&lon={1}&units=metric&appid=44db6a862fba0b067b1930da0d769e98", lat, lon);
 
             var response = await http.GetAsync(url);
@@ -44,7 +46,6 @@ namespace UWPWeather
     {
         [DataMember]
         public double lon { get; set; }
-
         [DataMember]
         public double lat { get; set; }
     }
@@ -54,13 +55,10 @@ namespace UWPWeather
     {
         [DataMember]
         public int id { get; set; }
-
         [DataMember]
         public string main { get; set; }
-
         [DataMember]
         public string description { get; set; }
-
         [DataMember]
         public string icon { get; set; }
     }
@@ -70,18 +68,18 @@ namespace UWPWeather
     {
         [DataMember]
         public double temp { get; set; }
-
         [DataMember]
-        public int pressure { get; set; }
-
+        public double pressure { get; set; }
         [DataMember]
         public int humidity { get; set; }
-
         [DataMember]
         public double temp_min { get; set; }
-
         [DataMember]
         public double temp_max { get; set; }
+        [DataMember]
+        public double sea_level { get; set; }
+        [DataMember]
+        public double grnd_level { get; set; }
     }
 
     [DataContract]
@@ -89,10 +87,15 @@ namespace UWPWeather
     {
         [DataMember]
         public double speed { get; set; }
-
         [DataMember]
         public int deg { get; set; }
     }
+
+    //[DataContract]
+    //public class Rain
+    //{
+    //    public double __invalid_name__3h { get; set; }
+    //}
 
     [DataContract]
     public class Clouds
@@ -105,20 +108,11 @@ namespace UWPWeather
     public class Sys
     {
         [DataMember]
-        public int type { get; set; }
-
-        [DataMember]
-        public int id { get; set; }
-
-        [DataMember]
         public double message { get; set; }
-
         [DataMember]
         public string country { get; set; }
-
         [DataMember]
         public int sunrise { get; set; }
-
         [DataMember]
         public int sunset { get; set; }
     }
@@ -128,34 +122,26 @@ namespace UWPWeather
     {
         [DataMember]
         public Coord coord { get; set; }
-
         [DataMember]
         public List<Weather> weather { get; set; }
-
         [DataMember]
         public string @base { get; set; }
-
         [DataMember]
         public Main main { get; set; }
-
         [DataMember]
         public Wind wind { get; set; }
-
+        //[DataMember]
+        //public Rain rain { get; set; }
         [DataMember]
         public Clouds clouds { get; set; }
-
         [DataMember]
         public int dt { get; set; }
-
         [DataMember]
         public Sys sys { get; set; }
-
         [DataMember]
         public int id { get; set; }
-
         [DataMember]
         public string name { get; set; }
-
         [DataMember]
         public int cod { get; set; }
     }
