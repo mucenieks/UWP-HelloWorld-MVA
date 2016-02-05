@@ -6,6 +6,8 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using Windows.ApplicationModel;
+using Windows.ApplicationModel.Store;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
@@ -29,6 +31,8 @@ namespace AlbumCoverMatchGame
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public LicenseInformation AppLicenseInformation { get; set; }
+
         private ObservableCollection<Song> Songs;
         private ObservableCollection<StorageFile> AllSongs;
 
@@ -171,8 +175,7 @@ namespace AlbumCoverMatchGame
             {
                 InstructionTextBlock.Text = string.Format("Game over ... You scored: {0}", _totalScore);
                 PlayAgainButton.Visibility = Visibility.Visible;
-            }
-            else
+            } else
             {
                 StartCooldown();
             }
@@ -181,12 +184,39 @@ namespace AlbumCoverMatchGame
         private async void PlayAgainButton_Click(object sender, RoutedEventArgs e)
         {
             await PrepareNewGame();
+
             PlayAgainButton.Visibility = Visibility.Collapsed;
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            // Remove these lines of code before publishing!
+            // The actual CurrentApp will create a WindowsStoreProxy.xml
+            // in the package's \LocalState\Microsoft\Windows Store\ApiData
+            // folder where it stores the actual purchases.
+            // Here we're just giving it a fake version of that file
+            // for testing.
+            StorageFolder proxyDataFolder = await Package.Current.InstalledLocation.GetFolderAsync("Assets");
+            StorageFile proxyFile = await proxyDataFolder.GetFileAsync("test.xml");
+            await CurrentAppSimulator.ReloadSimulatorAsync(proxyFile);
+            //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+            // You may want to put this at the App level
+            AppLicenseInformation = CurrentAppSimulator.LicenseInformation;
+
+            if (AppLicenseInformation.ProductLicenses["RemoveAdsOffer"].IsActive)
+            {
+                // Customer can access this feature.
+                AdMediator_40F141.Visibility = Visibility.Collapsed;
+                PurchaseButton.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                // Customer can NOT access this feature.
+                AdMediator_40F141.Visibility = Visibility.Visible;
+                PurchaseButton.Visibility = Visibility.Visible;
+            }
         }
 
         private async Task<ObservableCollection<StorageFile>> SetupMusicList()
@@ -256,10 +286,9 @@ namespace AlbumCoverMatchGame
 
         private async void CountDown_Completed(object sender, object e)
         {
-
             if (!_playingMusic)
             {
-                //// Start playing music
+                // Start playing music
                 var song = PickSong();
 
                 MyMediaElement.SetSource(
@@ -279,6 +308,38 @@ namespace AlbumCoverMatchGame
             var randomSong = unusedSongs.ElementAt(randomNumber);
             randomSong.Selected = true;
             return randomSong;
+        }
+
+        private async void PurchaseButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!AppLicenseInformation.ProductLicenses["MyInAppOfferToken"].IsActive)
+            {
+                try
+                {
+                    // The customer doesn't own this feature, so 
+                    // show the purchase dialog.
+
+                    PurchaseResults results = await CurrentAppSimulator.RequestProductPurchaseAsync("RemoveAdsOffer");
+
+                    //Check the license state to determine if the in-app purchase was successful.
+
+                    if (results.Status == ProductPurchaseStatus.Succeeded)
+                    {
+                        AdMediator_40F141.Visibility = Visibility.Collapsed;
+                        PurchaseButton.Visibility = Visibility.Collapsed;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // The in-app purchase was not completed because 
+                    // an error occurred.
+                    throw ex;
+                }
+            }
+            else
+            {
+                // The customer already owns this feature.
+            }
         }
     }
 }
