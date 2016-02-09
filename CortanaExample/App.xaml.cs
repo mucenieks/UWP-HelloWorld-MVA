@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -15,7 +16,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace HeroExplorer
+namespace CortanaExample
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -98,6 +99,7 @@ namespace HeroExplorer
             deferral.Complete();
         }
 
+
         protected override void OnActivated(IActivatedEventArgs e)
         {
             // Was the app activated by a voice command?
@@ -110,15 +112,60 @@ namespace HeroExplorer
 
             var speechRecognitionResult = commandArgs.Result;
             string voiceCommandName = speechRecognitionResult.RulePath[0];
+            string textSpoken = speechRecognitionResult.Text;
+
+            string spokenColor = "";
+            try
+            {
+                spokenColor = speechRecognitionResult.SemanticInterpretation.Properties["color"][0];
+            }
+            catch
+            {
+                //
+            }
+            
+            Windows.UI.Color color;
+
+            switch (spokenColor)
+            {
+                case "Red":
+                    color = Colors.Red;
+                    break;
+                case "Blue":
+                    color = Colors.Blue;
+                    break;
+                case "Yellow":
+                    color = Colors.Yellow;
+                    break;
+                case "Green":
+                    color = Colors.Green;
+                    break;
+                default:
+                    color = Colors.Purple;
+                    break;
+            }
 
             Frame rootFrame = Window.Current.Content as Frame;
             MainPage page = rootFrame.Content as MainPage;
             if (page == null)
+            {
                 return;
+            }
 
-            if (voiceCommandName == "refresh")
-                page.Refresh();
+            switch (voiceCommandName)
+            {
+                case "addRectangle":
+                    page.CreateRectangle(color);
+                    break;
 
+                case "addCircle":
+                    page.CreateCircle(color);
+                    break;
+
+                default:
+                    // There is no match for the voice command name.
+                    break;
+            }
         }
 
 
